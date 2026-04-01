@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #F5F1EA;
+    --color-bg-secondary: transparent;
+    --color-text: #1A1A1A;
+    --color-text-secondary: #6B6B6B;
+    --color-accent: #FF5A1F;
+    --color-border: #D9D9D9;
+    --grid-color: rgba(0, 0, 0, 0.05);
+    --particle-color: rgba(175, 203, 255, 0.4);
+  }
+
+  .dark {
+    --color-bg: #0d0b09;
+    --color-bg-secondary: #1a1612;
+    --color-text: #f5f0e8;
+    --color-text-secondary: #c4b8a8;
+    --color-accent: #FF5A1F;
+    --color-border: rgba(245, 240, 232, 0.15);
+    --grid-color: rgba(255, 255, 255, 0.05);
+    --particle-color: rgba(175, 203, 255, 0.1);
+  }
+}
+
+@layer utilities {
+  .text-border {
+    -webkit-text-stroke: 2px var(--color-text);
+    color: transparent;
+  }
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  cursor: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.bg-grid {
+  background-size: 80px 80px;
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+}
