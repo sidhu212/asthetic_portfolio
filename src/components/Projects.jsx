@@ -4,25 +4,32 @@ import { ArrowUpRight } from 'lucide-react';
 
 const projects = [
   {
-    title: "VEIP - Education Platform",
-    description: "Smart India Hackathon 2024 finalist project – LMS + freelance platform. Designed in Figma, built with React.",
-    tags: ["React", "Figma", "UI/UX Design", "LMS"],
-    links: ["GitHub", "Live Demo"],
+    title: "AI Chronic Disease Management",
+    description: "Telehealth system for daily patient health input and AI-generated insights via Gemini API. Features include virtual consultations, history tracking, and alerts. Presented at Yukti Innovation Challenge 2025.",
+    tags: ["PHP", "MySQL", "Gemini API", "AI"],
+    links: [{ name: "Live Demo", url: "https://chronicpulse.wuaze.com/public" }],
     visual: "01"
+  },
+  {
+    title: "VEIP - Education Platform",
+    description: "Smart India Hackathon 2024 finalist project – LMS + mentoring platform. Designed in Figma, built with React.",
+    tags: ["React", "Figma", "UI/UX Design", "LMS"],
+    links: [{ name: "Live Demo", url: "https://vission-landing-page.vercel.app/" }],
+    visual: "02"
   },
   {
     title: "Voice Assistant \"JARVIS\"",
     description: "Python voice assistant with system automation, NLP, and command execution.",
     tags: ["Python", "NLP", "Automation"],
-    links: ["GitHub"],
-    visual: "02"
+    links: [{ name: "Live Demo", url: "https://sidhu212.github.io/virtual-assistant/" }],
+    visual: "03"
   },
   {
     title: "E-Commerce Website",
     description: "Responsive e-commerce site with user authentication, shopping cart, and secure payments.",
     tags: ["React", "Node.js", "Authentication"],
-    links: ["GitHub", "Live Demo"],
-    visual: "03"
+    links: [{ name: "Live Demo", url: "#" }],
+    visual: "04"
   }
 ];
 
@@ -83,8 +90,8 @@ const Projects = () => {
 
                 <div className="flex gap-8 items-center mt-auto">
                   {project.links.map((link, idx) => (
-                    <a key={idx} href="#" className="flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-textPrimary hover:text-accent transition-colors duration-300">
-                      <span>{link}</span>
+                    <a key={idx} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-sm uppercase tracking-widest text-textPrimary hover:text-accent transition-colors duration-300">
+                      <span>{link.name}</span>
                       <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </a>
                   ))}

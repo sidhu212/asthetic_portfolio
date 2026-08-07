@@ -4,19 +4,31 @@ import { motion } from 'framer-motion';
 const skillsData = [
   {
     category: "Programming",
-    items: ["Python", "Java", "C++", "JavaScript"]
+    items: ["C++", "JavaScript", "Python", "Java"]
   },
   {
-    category: "Web",
-    items: ["HTML5", "CSS3", "React", "Firebase", "WordPress"]
+    category: "Web & App Development",
+    items: ["HTML5", "CSS3", "React.js", "React Native", "Firebase", "WordPress", "REST APIs", "Responsive Design"]
   },
   {
-    category: "Tools",
-    items: ["Git", "Android Studio", "Figma", "AWS"]
+    category: "Backend & Databases",
+    items: ["PHP (CodeIgniter)", "Firebase Firestore", "MySQL (basic)", "API Integration"]
+  },
+  {
+    category: "Tools & Platforms",
+    items: ["Git & GitHub", "Figma (UI/UX Design)", "Android Studio", "VS Code", "AWS (Basics)", "Vercel / Netlify"]
+  },
+  {
+    category: "AI & Modern Tech",
+    items: ["AI Tools & Automation", "Prompt Engineering", "Basic Machine Learning (Regression Models)"]
+  },
+  {
+    category: "Design & UI/UX",
+    items: ["UI/UX Design", "Wireframing", "Prototyping", "Design Systems"]
   },
   {
     category: "Soft Skills",
-    items: ["Leadership", "Teamwork", "Communication", "Innovation", "Problem Solving"]
+    items: ["Leadership (Led 50+ developers)", "Team Management", "Communication", "Problem Solving", "Innovation", "Project Management"]
   }
 ];
 

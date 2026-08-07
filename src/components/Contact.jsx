@@ -94,9 +94,8 @@ const Contact = () => {
         <div className="mt-32 pt-8 border-t border-borderColors flex flex-col md:flex-row justify-between items-center text-textSecondary font-mono text-xs uppercase tracking-widest gap-4">
           <span>&copy; {new Date().getFullYear()} Siddharth Singh</span>
           <div className="flex gap-8">
-             <a href="#" className="hover:text-accent transition-colors">LinkedIn</a>
-             <a href="#" className="hover:text-accent transition-colors">GitHub</a>
-             <a href="#" className="hover:text-accent transition-colors">Twitter</a>
+             <a href="https://github.com/sidhu212" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">GitHub</a>
+             <a href="https://www.linkedin.com/in/siddharth-singh-4b8416262/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">LinkedIn</a>
           </div>
         </div>
 

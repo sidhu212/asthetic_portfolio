@@ -2,14 +2,18 @@ import React, { useEffect, useState } from 'react';
 import Lenis from '@studio-freight/lenis';
 import CustomCursor from './components/CustomCursor';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
 import Loader from './components/Loader';
 import { AnimatePresence, motion } from 'framer-motion';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import ProjectsPage from './pages/ProjectsPage';
+import AboutPage from './pages/AboutPage';
+import Achievements from './pages/Achievements';
+import Certifications from './pages/Certifications';
+import ContactPage from './pages/ContactPage';
+import ProjectDetail from './pages/ProjectDetail';
+import ScrollToTop from './components/ScrollToTop';
 
 function Particles() {
   const [particles, setParticles] = useState([]);
@@ -92,39 +96,50 @@ function App() {
         infinite: false,
       });
 
+      window.__lenis = lenis;
+
       function raf(time) {
         lenis.raf(time);
         requestAnimationFrame(raf);
       }
       requestAnimationFrame(raf);
 
-      return () => lenis.destroy();
+      return () => {
+        lenis.destroy();
+        window.__lenis = null;
+      };
     }, 100);
 
     return () => clearTimeout(timer);
   }, [loading]);
 
   return (
-    <div className="relative bg-primary bg-grid text-textPrimary selection:bg-accent selection:text-white min-h-screen transition-colors duration-300">
-      <Particles />
+    <Router>
+      <ScrollToTop />
+      <div className="relative bg-primary bg-grid text-textPrimary selection:bg-accent selection:text-white min-h-screen transition-colors duration-300">
+        <Particles />
 
-      <AnimatePresence mode="wait">
-        {loading && <Loader key="loader" onLoadingComplete={() => setLoading(false)} />}
-      </AnimatePresence>
-      
-      <CustomCursor />
-      <div className={`${loading ? 'opacity-0 h-screen pointer-events-none' : 'opacity-100 transition-opacity duration-[1500ms]'}`}>
-        <Navigation theme={theme} toggleTheme={toggleTheme} />
-        <main className="relative z-10">
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-          <Contact />
-        </main>
+        <AnimatePresence mode="wait">
+          {loading && <Loader key="loader" onLoadingComplete={() => setLoading(false)} />}
+        </AnimatePresence>
+        
+        <CustomCursor />
+        <div className={`${loading ? 'opacity-0 h-screen pointer-events-none' : 'opacity-100 transition-opacity duration-[1500ms]'}`}>
+          <Navigation theme={theme} toggleTheme={toggleTheme} />
+          <main className="relative z-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/projects/:projectId" element={<ProjectDetail />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/achievements" element={<Achievements />} />
+              <Route path="/certifications" element={<Certifications />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

@@ -61,7 +61,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="font-serif text-2xl md:text-3xl text-textPrimary leading-relaxed mb-8"
             >
-              I'm a passionate B.Tech Computer Science student at Gyan Ganga College of Technology, driven by creating digital experiences that leave a lasting impact.
+              I’m Siddharth Singh, a Full Stack Developer and UI/UX Designer architecting digital products that look exceptional and perform effortlessly.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-mono text-sm text-textSecondary uppercase tracking-widest leading-loose"
             >
-              Currently serving as the <span className="text-accent hover:text-white transition-colors">Operational Head of GDSC</span>. I've successfully led large-scale tech initiatives and guided over 50+ developers. Recognized as a <span className="text-textPrimary border-b border-accent">Smart India Hackathon 2024 Finalist</span>.
+              Final-year B.Tech at Gyan Ganga College of Technology and <span className="text-accent hover:text-white transition-colors">Operational Head of GDSC</span>. From leading 50+ developers to being a <span className="text-textPrimary border-b border-accent">Smart India Hackathon 2024 Finalist</span>, I build with purpose using React, Firebase, PHP, and Figma.
             </motion.p>
           </div>
 
