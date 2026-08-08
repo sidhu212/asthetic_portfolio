@@ -47,7 +47,7 @@ const ContactCTA = () => {
               </Link>
 
               <a
-                href="/resume.pdf"
+                href="/Siddharth_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full border border-borderColors bg-secondary/60 text-textPrimary font-sans text-sm font-semibold uppercase tracking-wider hover:border-accent hover:text-accent hover:bg-accent/5 transition-all duration-300"

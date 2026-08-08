@@ -678,7 +678,7 @@ const AboutPage = () => {
                 {/* High Conversion CTA Action Buttons */}
                 <div className="pt-4 flex flex-wrap items-center gap-4">
                   <a
-                    href="/resume.pdf"
+                    href="/Siddharth_resume.pdf"
                     download="Siddharth_Singh_Resume.pdf"
                     className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-accent text-white font-medium text-sm hover:bg-accent/90 shadow-lg shadow-accent/20 hover:shadow-accent/40 transition-all duration-300 group"
                   >
@@ -2103,7 +2103,7 @@ const AboutPage = () => {
                   </Link>
 
                   <a
-                    href="/resume.pdf"
+                    href="/Siddharth_resume.pdf"
                     download="Siddharth_Singh_Resume.pdf"
                     className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl border border-borderColors bg-secondary/80 text-textPrimary font-semibold text-base hover:border-accent/60 hover:bg-accent/5 transition-all duration-300 group"
                   >

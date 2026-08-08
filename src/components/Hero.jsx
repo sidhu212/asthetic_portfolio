@@ -224,7 +224,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/resume.pdf"
+              href="/Siddharth_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 hover:text-accent transition-colors"

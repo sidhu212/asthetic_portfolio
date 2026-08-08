@@ -567,7 +567,7 @@ const ContactPage = () => {
                   {[
                     { value: '24h', label: 'Response' },
                     { value: '10+', label: 'Projects' },
-                    { value: '∞',  label: 'Ideas' },
+                    { value: '∞', label: 'Ideas' },
                   ].map(({ value, label }) => (
                     <div key={label} className="flex flex-col gap-1">
                       <span
@@ -696,7 +696,7 @@ const ContactPage = () => {
                 <LinkCard icon={Github} label="GitHub" sub="Open Profile" href="https://github.com/sidhu212" delay={0.1} />
                 <LinkCard icon={Linkedin} label="LinkedIn" sub="Let's Connect" href="https://www.linkedin.com/in/siddharth-singh-4b8416262/" delay={0.15} />
                 <LinkCard icon={Mail} label="Email" sub="Write Directly" href="mailto:siddharthsingh0259@gmail.com" delay={0.2} />
-                <LinkCard icon={Download} label="Resume" sub="Download CV" href="/resume.pdf" download="Siddharth_Singh_Resume.pdf" delay={0.25} />
+                <LinkCard icon={Download} label="Resume" sub="Download CV" href="/Siddharth_resume.pdf" download="Siddharth_Singh_Resume.pdf" delay={0.25} />
               </div>
             </RevealSection>
 
@@ -933,7 +933,7 @@ const ContactPage = () => {
                 LinkedIn
               </motion.a>
               <motion.a
-                href="/resume.pdf"
+                href="/Siddharth_resume.pdf"
                 download="Siddharth_Singh_Resume.pdf"
                 whileHover={{ y: -3, scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
